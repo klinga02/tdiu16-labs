@@ -1,0 +1,26 @@
+{
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "files.associations": {
+        "tcc": "cpp",
+        "iterator": "c",
+        "__locale": "c",
+        "ios": "c",
+        "__threading_support": "cpp",
+        "flist.h": "c",
+        "stddef.h": "c",
+        "stdbool.h": "c",
+        "file.h": "c",
+        "plist.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "syscall.h": "c",
+        "inode.h": "c",
+        "memory": "c",
+        "malloc.h": "c"
+    }
+}

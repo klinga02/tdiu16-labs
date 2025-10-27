@@ -1,0 +1,405 @@
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index c056434..0000000
+--- a/README.md
++++ /dev/null
+@@ -1,93 +0,0 @@
+-# tdiu16-labs
+-
+-
+-
+-## Getting started
+-
+-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+-
+-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+-
+-## Add your files
+-
+-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+-
+-```
+-cd existing_repo
+-git remote add origin https://gitlab.liu.se/malol190/tdiu16-labs.git
+-git branch -M main
+-git push -uf origin main
+-```
+-
+-## Integrate with your tools
+-
+-- [ ] [Set up project integrations](https://gitlab.liu.se/malol190/tdiu16-labs/-/settings/integrations)
+-
+-## Collaborate with your team
+-
+-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
+-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
+-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+-
+-## Test and Deploy
+-
+-Use the built-in continuous integration in GitLab.
+-
+-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
+-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
+-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+-
+-***
+-
+-# Editing this README
+-
+-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+-
+-## Suggestions for a good README
+-
+-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+-
+-## Name
+-Choose a self-explaining name for your project.
+-
+-## Description
+-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+-
+-## Badges
+-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+-
+-## Visuals
+-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+-
+-## Installation
+-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+-
+-## Usage
+-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+-
+-## Support
+-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+-
+-## Roadmap
+-If you have ideas for releases in the future, it is a good idea to list them in the README.
+-
+-## Contributing
+-State if you are open to contributions and what your requirements are for accepting them.
+-
+-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+-
+-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+-
+-## Authors and acknowledgment
+-Show your appreciation to those who have contributed to the project.
+-
+-## License
+-For open source projects, say how it is licensed.
+-
+-## Project status
+-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+diff --git a/src/standalone/lab1b/debug2.c b/src/standalone/lab1b/debug2.c
+index 1df31c7..dd9ae5e 100644
+--- a/src/standalone/lab1b/debug2.c
++++ b/src/standalone/lab1b/debug2.c
+@@ -49,6 +49,7 @@ void print_with_header(const char *header, int *numbers, int count)
+   printf("------------------\n");
+ 
+   print_numbers(numbers, count);
++
+ }
+ 
+ int main(void)
+diff --git a/src/standalone/lab1c/main.c b/src/standalone/lab1c/main.c
+index 9bece1d..76444a9 100644
+--- a/src/standalone/lab1c/main.c
++++ b/src/standalone/lab1c/main.c
+@@ -21,7 +21,6 @@
+  *
+  * valgrind --tool=memcheck ./main
+  */
+-//#error Read comments above, then remove this line.
+ 
+ 
+ /* Can be used to inform compiler about unused parameters (prevent
+@@ -34,9 +33,8 @@
+ /* function passed as parameter to map_remove_if in order to free the
+  * memory for all inseted values, and return true to remove them from
+  * the map */
+-bool do_free (key_t k UNUSED, value_t v, int aux UNUSED)
++bool do_free (key_t k UNUSED, value_t v UNUSED, int aux UNUSED)
+ {
+-  free(v);     /*! free memory */
+   return true; /*  and remove from collection */
+ }
+ 
+@@ -99,7 +97,7 @@ int main (void)
+   /* remember to test with invalid keys (like 4711, or -1) */
+   for ( i = 0; i < LOOPS; ++i)
+   {
+-    printf("Enter id to find value for: ");
++    printf("\nEnter id to find value for: ");
+     scanf("%d", &id);
+ 
+     /*! find the value for a key in the map */
+@@ -107,13 +105,9 @@ int main (void)
+ 
+     /*! if it was found, display it */
+     if (obj != NULL)
+-    {
+-      printf("Found value: %s\n", obj);
+-    }
++      printf("It was found: %s\n", obj);
+     else
+-    {
+-      printf("No value found for id %d\n", id);
+-    }
++      printf("It was not found\n");
+ 
+     /* since we leave the value in the map we may use it again and
+      * should not free the memory */
+@@ -129,15 +123,12 @@ int main (void)
+     obj = map_remove(&container, id);
+ 
+     /*! if it was found, display it */
+-    if (obj != NULL)
+-    {
+-      printf("Removed value: %s\n", obj);
+-      free(obj); /* free the memory */
+-    }
+-    else
+-    {
+-      printf("No value found for id %d\n", id);
+-    }
++    if (obj != NULL){
++      printf("It was found: %s\n", obj);
++      free(obj);
++    }else
++      printf("It was not found\n");
++
+     /* since we removed the value from the map we will never use it again and
+      * must properly free the memory (if it was allocated) */
+   }
+diff --git a/src/standalone/lab1c/map.c b/src/standalone/lab1c/map.c
+index 1f10e78..87157a5 100644
+--- a/src/standalone/lab1c/map.c
++++ b/src/standalone/lab1c/map.c
+@@ -17,23 +17,17 @@ void map_init(map_ptr_t m)
+ 
+ key_t map_insert(map_ptr_t m, value_t v)
+ {
+-    int i; // Variable to store the index of the inserted value
+-    
+-    for (i = 0; i < MAP_SIZE; i++)
++    int i = 0;
++    while (m->content[i] != NULL && i < MAP_SIZE)
+     {
+-        if (m->content[i] == NULL)
+-        {
+-            m->content[i] = v; // Insert the value at the first empty slot
+-            break; // Found an empty slot
+-        }
++        i++;
+     }
+-
+     if (i == MAP_SIZE)
+     {
+-        printf("Map is full, cannot insert value\n");
+-        return -1; // Map is full, return an error code
++        fprintf(stderr, "Error: Map is full\n");
++        return -1; // Map is full
+     }
+-
++    m->content[i] = v;
+     return i; // Return the index of the inserted value
+ }
+ 
+@@ -48,26 +42,26 @@ value_t map_find(map_ptr_t m, key_t k)
+ 
+ value_t map_remove(map_ptr_t m, key_t k)
+ {
++    value_t rmv = m->content[k]; 
+     if (k < 0 || k >= MAP_SIZE)
+     {
+         return NULL; // Invalid key
+     }
+-    value_t v = m->content[k]; // Store the value to return
+-    //free(v); // Free the memory allocated for the value
+-    m->content[k] = NULL; // Remove the value from the map
+-    
+-    return v; // Return the removed value
++    // free(m->content[k]); 
++    m->content[k] = NULL; 
++    return rmv; // Return NULL to indicate that the value has been removed
++
+ }
+ 
+ void map_for_each(map_ptr_t m, 
+                 void (*exec)(key_t k, value_t v, int aux), 
+                 int aux)
+ {   
+-    for (int i = 0; i < MAP_SIZE; i++)
++    for (int j = 0; j < MAP_SIZE; j++)
+     {
+-        if (m->content[i] != NULL)
++        if (m->content[j] != NULL)
+         {
+-            exec(i, m->content[i], aux); // Execute the function for each non-NULL value
++            exec(j, m->content[j], aux); // Call the function with the key, value, and aux
+         }
+     }
+ }
+@@ -75,12 +69,13 @@ void map_for_each(map_ptr_t m,
+ void map_remove_if(map_ptr_t m, 
+                 bool (*cond)(key_t k, value_t v, int aux), 
+                 int aux)
+-{
+-    for (int i = 0; i < MAP_SIZE; i++)
++{  
++    for (int j = 0; j < MAP_SIZE; j++)
+     {
+-        if (m->content[i] != NULL && cond(i, m->content[i], aux))
++        if (m->content[j] != NULL && cond(j, m->content[j], aux))
+         {
+-            m->content[i] = NULL; // Remove the value from the map
++            free(m->content[j]); // Free the memory for the value
++            m->content[j] = NULL; // Set the pointer to NULL
+         }
+     }
+ }
+diff --git a/src/standalone/lab3a/exec-wait.c b/src/standalone/lab3a/exec-wait.c
+index e7de1ee..b04a4bf 100644
+--- a/src/standalone/lab3a/exec-wait.c
++++ b/src/standalone/lab3a/exec-wait.c
+@@ -4,7 +4,6 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ 
+-
+ // Funktionen vi vill köra parallellt. Den finns definierad senare i filen.
+ int do_work(int param);
+ 
+@@ -19,15 +18,11 @@ struct running_thread {
+ 
+   // Om tråden är klar: Resultatet som "do_work" har beräknat.
+   int result;
+-
+-  // Om tråden inte är klar: En semafor som används för att vänta på att tråden ska bli blir klar. ########
+-  struct semaphore sema;
+ };
+ 
+ // Första funktionen som körs i nya trådar.
+ void thread_main(struct running_thread *data) {
+   data->result = do_work(data->param);
+-  sema_up(&data->sema);
+ }
+ 
+ // Starta en ny tråd som kör funktionen "do_work" med "param" som
+@@ -39,8 +34,6 @@ struct running_thread *exec(int param) {
+   struct running_thread *data = malloc(sizeof(struct running_thread));
+   data->param = param;
+ 
+-  sema_init(&data->sema, 0);
+-
+   // Skapa en ny tråd som kör "thread_main" och ge den tillgång till "data".
+   thread_new(&thread_main, data);
+ 
+@@ -52,7 +45,6 @@ struct running_thread *exec(int param) {
+ // gång för varje anrop till "exec".
+ int wait(struct running_thread *data) {
+   // Hämta resultatet, frigör minnet och returnera resultatet.
+-  sema_down(&data->sema);
+   int result = data->result;
+   free(data);
+   return result;
+diff --git a/src/userprog/syscall.c b/src/userprog/syscall.c
+index 4682c5d..5e98c37 100644
+--- a/src/userprog/syscall.c
++++ b/src/userprog/syscall.c
+@@ -13,16 +13,16 @@
+ #include "userprog/pagedir.h"
+ #include "userprog/process.h"
+ #include "devices/input.h"
+-#include "lib/user/syscall.h"
+ 
++static void syscall_handler (struct intr_frame *);
+ 
+-static void syscall_handler(struct intr_frame *);
+-
+-void syscall_init(void)
++void
++syscall_init (void)
+ {
+-  intr_register_int(0x30, 3, INTR_ON, syscall_handler, "syscall");
++  intr_register_int (0x30, 3, INTR_ON, syscall_handler, "syscall");
+ }
+ 
++
+ /* This array defined the number of arguments each syscall expects.
+    For example, if you want to find out the number of arguments for
+    the read system call you shall write:
+@@ -33,48 +33,29 @@ void syscall_init(void)
+    type, see `lib/syscall-nr.h'. Use them instead of numbers.
+  */
+ const int argc[] = {
+-    /* basic calls */
+-    0, 1, 1, 1, 2, 1, 1, 1, 3, 3, 2, 1, 1,
+-    /* not implemented */
+-    2, 1, 1, 1, 2, 1, 1,
+-    /* extended, you may need to change the order of these two (plist, sleep) */
+-    0, 1};
++  /* basic calls */
++  0, 1, 1, 1, 2, 1, 1, 1, 3, 3, 2, 1, 1,
++  /* not implemented */
++  2, 1,    1, 1, 2, 1, 1,
++  /* extended, you may need to change the order of these two (plist, sleep) */
++  0, 1
++};
+ 
+ static void
+-syscall_handler(struct intr_frame *f)
++syscall_handler (struct intr_frame *f)
+ {
+-  int32_t *esp = (int32_t *)f->esp;
+-  int syscall_number = esp[0];
+-  
+-  int arg_count = argc[syscall_number];
+-  int arg1 = (arg_count > 0) ? esp[1] : 0;
+-  int arg2 = (arg_count > 1) ? esp[2] : 0;
+-  int arg3 = (arg_count > 2) ? esp[3] : 0;
++  int32_t* esp = (int32_t*)f->esp;
+ 
+-  switch (syscall_number)
+-  {
+-  case SYS_HALT:
+-  {
+-    printf("System call: HALT\n");
+-    power_off();
+-    break;
+-  }
+-  case SYS_EXIT:
++  switch ( 0 /* retrive syscall number */ )
+   {
+-    printf("System call: EXIT\n");
+-    print(arg1);
+-    thread_exit();
+-    break;
+-  }
+-
+-  default:
+-  {
+-    printf("Executed an unknown system call!\n");
++    default:
++    {
++      printf ("Executed an unknown system call!\n");
+ 
+-    printf("Stack top + 0: %d\n", esp[0]);
+-    printf("Stack top + 1: %d\n", esp[1]);
++      printf ("Stack top + 0: %d\n", esp[0]);
++      printf ("Stack top + 1: %d\n", esp[1]);
+ 
+-    thread_exit();
+-  }
++      thread_exit ();
++    }
+   }
+ }

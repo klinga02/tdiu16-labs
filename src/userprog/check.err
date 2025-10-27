@@ -1,0 +1,2 @@
+make[1]: *** [../../tests/Make.tests:105: tests/klaar/pfs.output] Interrupt
+make: *** [../Makefile.kernel:10: check] Interrupt

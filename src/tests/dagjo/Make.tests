@@ -1,0 +1,17 @@
+# -*- makefile -*-
+
+tests/%.output: FSDISK = 2
+tests/%.output: PUTFILES = $(filter-out os.dsk, $^)
+
+tests/dagjo_TESTS = $(addprefix tests/dagjo/, check-close)
+
+tests/dagjo_PROGS = $(tests/dagjo_TESTS) $(addprefix \
+tests/dagjo/, no-close)
+
+# check-close
+tests/dagjo/no-close_SRC = tests/dagjo/no-close.c
+tests/dagjo/check-close_SRC = tests/dagjo/check-close.c
+tests/dagjo/check-close_PUTFILES += tests/dagjo/no-close
+
+$(foreach prog,$(tests/dagjo_PROGS),$(eval $(prog)_SRC += tests/lib.c))
+$(foreach prog,$(tests/dagjo_TESTS),$(eval $(prog)_SRC += tests/main.c))
